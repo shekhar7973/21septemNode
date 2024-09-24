@@ -1,0 +1,40 @@
+<%- include('./base/header.ejs')%>
+
+<div class="container"></div>
+    <div class="alert bg-success my-3">
+      <h4 class ="text-center"style="color:white">Students List</h4>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+        <table class="teble text-center">
+            <thead>
+                <tr>
+                    <th>RollNo</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Adhar Card</th>
+                    <th>Mobile No</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <% students.forEach((student)=>{ %>
+                <tr>
+                    <td><%=student.rollNo %></td>
+                    <td><%=student.firstName %></td>
+                    <td><%= student.lastName %></td>
+                    <td><%= student.adharCard %></td>
+                    <td><%= student.mobileNo %></td>
+                    <td>
+                      <a href="/student/edit/page/<%= student._id%>"class="btn btn-warning w-75">Edit</a>
+                      <a href="/delete/student/<%= student._id%>"class="btn btn-danger w-75">Delete</a></td>
+                </tr>
+
+           <% }) %>
+
+        </table>
+    </div>
+  </div>
+
+<%- include('./base/footer.ejs')%>

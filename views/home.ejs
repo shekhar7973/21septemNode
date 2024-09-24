@@ -1,0 +1,65 @@
+
+<%- include('./base/header.ejs')%>
+  <div class="container">
+    <div class="alert bg-success my-3">
+      <h4 class ="text-center"style="color:white"> Add New Student</h4>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <form action = '/add/student' method ="post">
+          <div>
+            <label class ="form-label">
+              roll no 
+            </label>
+            <input type="text" class="form-control" name="rollNo" >
+          </div>
+
+          <div>
+            <label class ="form-label">
+              firstName
+            </label>
+            <input type="text" class="form-control" name="firstName" >
+          </div>
+
+          <div>
+            <label class ="form-label">
+              lastName
+            </label>
+            <input type="text" class="form-control" name="lastName" >
+          </div>
+
+          <div>
+            <label class ="form-label">
+              adharcard
+            </label>
+            <input type="text" class="form-control" name="adharCard" >
+          </div>
+
+          <div>
+            <label class ="form-label">
+              fatherName
+            </label>
+            <input type="text" class="form-control" name="fatherName" >
+          </div>
+
+          <div>
+            <label class ="form-label">
+              mobileNo
+            </label>
+            <input type="text" class="form-control" name="mobileNo" >
+          </div>
+
+          <input type="submit" value ="ADD student" class="btn btn-warning w-100">
+
+          <br>
+
+
+        </form>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+  <%- include('./base/footer.ejs')%>
